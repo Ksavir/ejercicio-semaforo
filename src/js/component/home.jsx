@@ -1,26 +1,46 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
+/*function Home (props) {
+	const [color, setColor] = useState(null);
+
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="text-center mt-5">
+			<h1>Traffic Light</h1>
+			<div className="traffic-light">
+				<div
+					className={
+						color === "red" ? "red active glass" : "red inactive"
+					}
+					onClick={() => setColor("red")}
+				/>
+				<div
+					className={
+						color === "yellow"
+							? "yellow active glass"
+							: "yellow inactive"
+					}
+					onClick={() => setColor("yellow")}
+				/>
+				<div
+					className={
+						color === "green"
+							? "green active glass"
+							: "green inactive"
+					}
+					onClick={() => setColor("green")}
+				/>
+			</div>
 		</div>
 	);
-};
+}
+
+Home.propTypes = {
+	color: PropTypes.string
+};*/
 
 export default Home;
